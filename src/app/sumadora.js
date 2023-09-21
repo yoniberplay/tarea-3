@@ -49,29 +49,32 @@ export default function ModalSumadora() {
                     </span>
                   </button>
                 </div>
-                {/*body*/}
-                <div className="relative p-6 flex-auto text-black">
+
+                <div class="bg-white p-8 rounded-lg shadow-md w-96 text-black">
                   <input
                     type="number"
-                    placeholder="Ingrese el primer número"
-                    // value={numero1}
+                    id="numero1"
+                    class="w-full border p-2 rounded-md mb-4"
+                    placeholder="Número 1"
                     onChange={(e) => setNumero1(Number(e.target.value))}
                   />
                   <input
                     type="number"
-                    placeholder="Ingrese el segundo número"
-                    // value={numero2}
+                    id="numero2"
+                    class="w-full border p-2 rounded-md mb-4"
+                    placeholder="Número 2"
                     onChange={(e) => setNumero2(Number(e.target.value))}
                   />
-                </div>
-                <div className="flex items-center justify-center">
-                  <p className="text-black mr-5">Resultado: {resultado}</p>
                   <button
                     onClick={sumar}
-                    class=" ml-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-300"
                   >
                     Sumar
                   </button>
+                  <div class="mt-4">
+                    <strong>Resultado: {resultado}</strong>
+                    <p id="resultado" class="text-lg font-semibold"></p>
+                  </div>
                 </div>
 
                 {/*footer*/}
